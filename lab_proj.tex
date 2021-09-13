@@ -1,0 +1,27 @@
+%% AMS-LaTeX Created with the Wolfram Language for Students - Personal Use Only : www.wolfram.com
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicapage}
+\begin{document}
+
+\begin{doublespace}
+\noindent\(\pmb{\text{Remove}[\text{{``}Global$\grave{ }$*{''}}]}\)
+\end{doublespace}
+
+\section*{Bounded Trajectories}
+
+Numerically solving the equations parametrically, with parameter $\mu $ (mass ratio) for bounded trajectories and generating plots for various $\mu $.\\
+\(\frac{d}{dt}\)v(t) = (r(t) \(\omega (t)^2 +\)g cos($\theta $(t) - $\mu $))/(1+$\mu $)\\
+\(\frac{d}{dt}\)$\omega $(t) { }= (-2v(t)$\omega $(t) - gsin($\theta $(t)))/r(t)\\
+with initial conditions { }r(0 )= 1, { }$\theta $(0) = \(90^0\), v(0) = 0, $\omega $(0) = 0
+
+\begin{doublespace}
+\noindent\(\pmb{\text{sol} =\text{ParametricNDSolve}[\{ v'[t] ==( r[t] \omega [t]{}^{\wedge}2 + 9.8 (\text{Cos}[\theta [t]] - \mu ))/(1+\mu ), \omega '[t] ==(- 2v[t] \omega [t] - 9.8 \text{Sin}[\theta [t]])/r[t],}\\
+\pmb{r'[t] \text{==} v[t],\theta '[t] ==\omega [t], r[0]==1, \theta [0] \text{==} \text{Pi}/2,v[0] \text{==} 0, \omega [0] \text{==} 0\}, \{r,v, \theta , \omega \},\{t, 0, 100\},\{\mu \}, \text{MaxSteps}\to 200000]}\)
+\end{doublespace}
+
